@@ -1,0 +1,25 @@
+<div class="login-card" fxLayout="row" fxLayoutAlign="space-around center" fxFill>
+  <mat-card fxFlex="25">
+    <mat-card-header fxLayout="row" fxLayoutAlign="center center">
+      <mat-card-title>Sign in</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="userForm" (ngSubmit)="submitUserForm()">
+        <div class="form-class" fxLayout="column" fxLayoutAlign="space-around center">
+          <mat-form-field class="user-input" appearance="legacy">
+            <mat-label>Username</mat-label>
+            <input matInput [formControlName]="'username'">
+          </mat-form-field>
+          <mat-form-field class="password-input" appearance="legacy">
+            <mat-label>Password</mat-label>
+            <input matInput [formControlName]="'password'">
+          </mat-form-field>
+          <a>Sign up!</a>
+        </div>
+      </form>
+    </mat-card-content>
+    <mat-card-actions fxLayout="row" fxLayoutAlign="end center">
+      <button mat-raised-button (click)="submitUserForm()">Sign in</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

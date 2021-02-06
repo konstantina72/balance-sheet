@@ -1,0 +1,26 @@
+<mat-label class="header-label">Non-current assets</mat-label>
+<div fxLayout="row" fxLayoutAlign="start start">
+  <app-tangible-assets #tangibleAssets></app-tangible-assets>
+  <app-intangible-assets #intangibleAssets></app-intangible-assets>
+  <app-financial-assets #financialAssets></app-financial-assets>
+  <form [formGroup]="nonCurrentAssetsForm">
+    <div fxLayout="column" fxLayoutAlign="start start">
+      <mat-form-field appearance="legacy">
+        <mat-label>Payments on account and non-current assets in course of construction</mat-label>
+        <input matInput [formControlName]="'payAccNonCurAssetsInCourseCon'">
+      </mat-form-field>
+
+      <mat-form-field appearance="legacy">
+        <mat-label>Deferred taxes</mat-label>
+        <input matInput [formControlName]="'deferredTaxes'">
+      </mat-form-field>
+    </div>
+  </form>
+</div>
+<div fxLayout="row">
+  <button mat-raised-button (click)="saveNonCurrentAssetsForm()">Save Non-Current assets</button>
+  <mat-form-field class="total-field" appearance="legacy">
+    <input matInput [value]="sum">
+  </mat-form-field>
+</div>
+

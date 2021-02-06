@@ -1,0 +1,36 @@
+<form [formGroup]="financialAssetsForm">
+  <div class="form-class" fxLayout="column" fxLayoutAlign="space-around start">
+    <mat-label class="header-class">Tangible assets</mat-label>
+    <mat-form-field appearance="legacy">
+      <mat-label>Loans and receivables</mat-label>
+      <input matInput [formControlName]="'loansAndReceivables'">
+    </mat-form-field>
+
+    <mat-form-field appearance="legacy">
+      <mat-label>Held to maturity investments</mat-label>
+      <input matInput [formControlName]="'heldToMaturityInvestments'">
+    </mat-form-field>
+
+    <mat-form-field appearance="legacy">
+      <mat-label>Participating interests in subsidiaries, associates and joint ventures</mat-label>
+      <input matInput [formControlName]="'particInterestsInSubsAssJointVent'">
+    </mat-form-field>
+
+    <mat-form-field appearance="legacy">
+      <mat-label>Available for sale financial assets</mat-label>
+      <input matInput [formControlName]="'availableForSaleFinancialAssets'">
+    </mat-form-field>
+
+    <mat-form-field appearance="legacy">
+      <mat-label>Assets intended to hedging</mat-label>
+      <input matInput [formControlName]="'assetsIntendedToHedging'">
+    </mat-form-field>
+
+    <div fxLayout="row">
+      <button mat-raised-button (click)="totalFinancialAssets()">Total</button>
+      <mat-form-field class="total-field" appearance="legacy">
+        <input matInput [value]="sum">
+      </mat-form-field>
+    </div>
+  </div>
+</form>

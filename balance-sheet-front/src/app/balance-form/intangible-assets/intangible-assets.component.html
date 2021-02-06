@@ -1,0 +1,26 @@
+<form [formGroup]="intangibleAssetsForm">
+  <div class="form-class" fxLayout="column" fxLayoutAlign="space-around start">
+    <mat-label class="header-class">Tangible assets</mat-label>
+    <mat-form-field appearance="legacy">
+      <mat-label>Development costs</mat-label>
+      <input matInput [formControlName]="'developmentCosts'">
+    </mat-form-field>
+
+    <mat-form-field appearance="legacy">
+      <mat-label>Goodwill</mat-label>
+      <input matInput [formControlName]="'goodwill'">
+    </mat-form-field>
+
+    <mat-form-field appearance="legacy">
+      <mat-label>Other intangible assets</mat-label>
+      <input matInput [formControlName]="'otherIntangibleAssets'">
+    </mat-form-field>
+
+    <div fxLayout="row">
+      <button mat-raised-button (click)="totalIntangibleAssets()">Total</button>
+      <mat-form-field class="total-field" appearance="legacy">
+        <input matInput [value]="sum">
+      </mat-form-field>
+    </div>
+  </div>
+</form>
