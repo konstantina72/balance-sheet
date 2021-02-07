@@ -1,0 +1,12 @@
+<mat-label class="header-label">Current assets</mat-label>
+<div fxLayout="row" fxLayoutAlign="start start">
+  <app-inventories #inventories></app-inventories>
+  <app-fin-ass-pay-on-acc #finAssPayOnAcc></app-fin-ass-pay-on-acc>
+</div>
+<div fxLayout="row">
+  <button mat-raised-button (click)="saveCurrentAssets()">Save Current assets</button>
+  <mat-form-field class="total-field" appearance="legacy">
+    <input matInput [value]="sum">
+  </mat-form-field>
+</div>
+

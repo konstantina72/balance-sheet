@@ -10,8 +10,6 @@ import {NonCurrentAssets} from "../interfaces/non-current-assets";
 })
 export class BalanceFormComponent implements OnInit {
 
-  nonCurrentAssets: NonCurrentAssets;
-
   balanceForm: FormGroup = this.formBuilder.group({});
 
   constructor(private formBuilder: FormBuilder, private router: Router) {

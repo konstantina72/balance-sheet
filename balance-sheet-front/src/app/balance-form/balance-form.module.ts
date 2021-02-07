@@ -14,10 +14,14 @@ import {TangibleAssetsComponent} from './tangible-assets/tangible-assets.compone
 import {IntangibleAssetsComponent} from './intangible-assets/intangible-assets.component';
 import {FinancialAssetsComponent} from './financial-assets/financial-assets.component';
 import {NonCurrentAssetsComponent} from './non-current-assets/non-current-assets.component';
+import {InventoriesComponent} from './inventories/inventories.component';
+import {FinAssPayOnAccComponent} from './fin-ass-pay-on-acc/fin-ass-pay-on-acc.component';
+import {CurrentAssetsComponent} from './current-assets/current-assets.component';
+import {AssetsComponent} from './assets/assets.component';
 
 
 @NgModule({
-  declarations: [BalanceFormComponent, TangibleAssetsComponent, IntangibleAssetsComponent, FinancialAssetsComponent, NonCurrentAssetsComponent],
+  declarations: [BalanceFormComponent, TangibleAssetsComponent, IntangibleAssetsComponent, FinancialAssetsComponent, NonCurrentAssetsComponent, InventoriesComponent, FinAssPayOnAccComponent, CurrentAssetsComponent, AssetsComponent],
   imports: [
     CommonModule,
     BalanceFormRoutingModule,

@@ -1,0 +1,8 @@
+<div fxLayout="column" fxLayoutAlign="space-between stretch" fxLayoutGap="5%">
+  <app-non-current-assets #nonCurrentAssets></app-non-current-assets>
+  <app-current-assets #currentAssets></app-current-assets>
+</div>
+<button mat-raised-button (click)="saveAssets()">Total Assets</button>
+<mat-form-field class="total-field" appearance="legacy">
+  <input matInput [value]="sum">
+</mat-form-field>

@@ -42,5 +42,4 @@ export class NonCurrentAssetsComponent implements OnInit {
     return nonCurrentAssets;
   }
 
-
 }

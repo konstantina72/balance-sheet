@@ -1,0 +1,43 @@
+<form [formGroup]="finAssPayOnAccForm">
+  <div class="form-class" fxLayout="column" fxLayoutAlign="space-around start">
+
+    <mat-label class="header-class">Financial assets and payments on account</mat-label>
+
+    <mat-form-field appearance="legacy">
+      <mat-label>Trade receivables</mat-label>
+      <input matInput [formControlName]="'tradeReceivables'">
+    </mat-form-field>
+
+    <mat-form-field appearance="legacy">
+      <mat-label>Accrued income</mat-label>
+      <input matInput [formControlName]="'accruedIncome'">
+    </mat-form-field>
+
+    <mat-form-field appearance="legacy">
+      <mat-label>Other receivables</mat-label>
+      <input matInput [formControlName]="'otherReceivables'">
+    </mat-form-field>
+
+    <mat-form-field appearance="legacy">
+      <mat-label>Trading portfolio</mat-label>
+      <input matInput [formControlName]="'tradingPortfolio'">
+    </mat-form-field>
+
+    <mat-form-field appearance="legacy">
+      <mat-label>Prepaid expenses</mat-label>
+      <input matInput [formControlName]="'prepaidExpenses'">
+    </mat-form-field>
+
+    <mat-form-field appearance="legacy">
+      <mat-label>Cash and cash equivalents</mat-label>
+      <input matInput [formControlName]="'cashAndCashEquivalents'">
+    </mat-form-field>
+
+    <div fxLayout="row">
+      <button mat-raised-button (click)="totalfinAssPayOnAcc()">Total</button>
+      <mat-form-field class="total-field" appearance="legacy">
+        <input matInput [value]="sum">
+      </mat-form-field>
+    </div>
+  </div>
+</form>

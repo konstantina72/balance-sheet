@@ -1,0 +1,43 @@
+<form [formGroup]="inventoriesForm">
+  <div class="form-class" fxLayout="column" fxLayoutAlign="space-around start">
+
+    <mat-label class="header-class">Inventories</mat-label>
+
+    <mat-form-field appearance="legacy">
+      <mat-label>Finished and semi-finished products</mat-label>
+      <input matInput [formControlName]="'finishedSemiFinishedProducts'">
+    </mat-form-field>
+
+    <mat-form-field appearance="legacy">
+      <mat-label>Merchandise</mat-label>
+      <input matInput [formControlName]="'merchandise'">
+    </mat-form-field>
+
+    <mat-form-field appearance="legacy">
+      <mat-label>Raw materials and consumables</mat-label>
+      <input matInput [formControlName]="'rawMaterialsConsumables'">
+    </mat-form-field>
+
+    <mat-form-field appearance="legacy">
+      <mat-label>Biological assets</mat-label>
+      <input matInput [formControlName]="'biologicalAssets'">
+    </mat-form-field>
+
+    <mat-form-field appearance="legacy">
+      <mat-label>Payments on account for inventories</mat-label>
+      <input matInput [formControlName]="'paymentsOnAccountForInventories'">
+    </mat-form-field>
+
+    <mat-form-field appearance="legacy">
+      <mat-label>Other inventories</mat-label>
+      <input matInput [formControlName]="'otherInventories'">
+    </mat-form-field>
+
+    <div fxLayout="row">
+      <button mat-raised-button (click)="totalInventories()">Total</button>
+      <mat-form-field class="total-field" appearance="legacy">
+        <input matInput [value]="sum">
+      </mat-form-field>
+    </div>
+  </div>
+</form>
